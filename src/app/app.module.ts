@@ -1,22 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import { PhotoElementComponent } from './photo-element/photo-element.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PhotoComponent } from './photo/photo.component';
+import { AppErrorHandler } from './common/app-error-handler';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PhotoElementComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PhotoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: ErrorHandler, useClass: AppErrorHandler }
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
