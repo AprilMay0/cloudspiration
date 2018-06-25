@@ -1,4 +1,6 @@
- <canvas #myCanvas width="600" height="600"></canvas>
- <button (click)="assignQuote(false)" class="btn btn-primary">Refresh Quote</button>
- <button (click)="assignImage()" class="btn btn-primary">Refresh Image</button>
- <button class="btn btn-primary">Download</button>
+<canvas #myCanvas id="myCanvas" width="600" height="600"></canvas>
+<div class="buttonHolder">
+  <button (click)="assignQuote(false)" class="btn btn-primary"><span class="glyphicons glyphicon-comment"></span> New Text</button>
+  <button (click)="assignImage()" class="btn btn-primary"><span class="glyphicons glyphicon-cloud"></span> New Image</button>
+  <button (click)="download()" class="btn btn-primary"><span class="glyphicons glyphicon-download"></span> Download</button>
+</div>
