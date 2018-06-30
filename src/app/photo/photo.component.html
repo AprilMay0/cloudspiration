@@ -1,6 +1,22 @@
-<canvas #myCanvas id="myCanvas" width="600" height="600"></canvas>
-<div class="buttonHolder">
-  <button (click)="assignQuote(false)" class="btn btn-primary"><span class="glyphicons glyphicon-comment"></span> New Text</button>
-  <button (click)="assignImage()" class="btn btn-primary"><span class="glyphicons glyphicon-cloud"></span> New Image</button>
-  <button (click)="download()" class="btn btn-primary"><span class="glyphicons glyphicon-download"></span> Download</button>
+<div *ngIf="!isMobile">
+  <canvas #myCanvas id="myCanvas" width="600" height="600"></canvas>
+</div>
+<div *ngIf="isMobile">
+  <canvas #myCanvas id="myCanvas" width="300" height="300"></canvas>
+</div>
+
+
+<div flexLayout="row" [class.button-bar]="!isMobile" [class.mobile-width]="isMobile">
+  <button fxFlex="33%" (click)="assignQuote(false)" mat-button color="accent">
+    <mat-icon>comment</mat-icon>
+    <span *ngIf="!isMobile"> New Text</span>
+  </button>
+  <button fxFlex="33%" (click)="assignImage()" mat-button color="accent">
+    <mat-icon>cloud</mat-icon>
+    <span *ngIf="!isMobile"> New Image</span>
+  </button>
+  <button fxFlex="33%" (click)="download()" mat-button color="accent">
+    <mat-icon>publish</mat-icon>
+    <span *ngIf="!isMobile"> Download</span>
+  </button>
 </div>

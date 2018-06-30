@@ -1,29 +1,21 @@
 canvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 600px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
-.btn {
-    background-color: #303030;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 14px 20px;
-    opacity: 0.6;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .btn:hover {opacity: 1}
+.button-bar {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 
-  .buttonHolder {
-      text-align: center;
-  }
+.mobile-width {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}

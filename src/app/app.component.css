@@ -1,0 +1,20 @@
+
+
+
+@font-face {
+    font-family: 'kingthings_bloone';
+    src: url('../fonts/kingthings_bloone/kingthings_bloone-webfont.woff2') format('woff2'),
+         url('../fonts/kingthings_bloone/kingthings_bloone-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fatso';
+    src: url('../fonts/fatso/fatsocap-webfont.woff2') format('woff2'),
+         url('../fonts/fatso/fatsocap-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

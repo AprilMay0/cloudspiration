@@ -1,0 +1,9 @@
+
+@font-face {
+    font-family: 'kingthings_blooneregular';
+    src: url('kingthings_bloone-webfont.woff2') format('woff2'),
+         url('kingthings_bloone-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
