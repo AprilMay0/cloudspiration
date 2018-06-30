@@ -10,6 +10,10 @@ import { PhotoComponent } from './photo/photo.component';
 import { AppErrorHandler } from './common/app-error-handler';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     HttpClientModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler }
