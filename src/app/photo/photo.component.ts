@@ -23,15 +23,16 @@ export class PhotoComponent implements OnInit {
 
     this.service.getText()
       .subscribe(texts => {
-        this.texts = texts;
-        this.assignQuote(true)
+        this.service.getClouds()
+          .subscribe(clouds => {
+            this.photos = clouds;
+            this.texts = texts;
+            this.assignQuote(true);
+            this.assignImage();
+          })
       })
 
-    this.service.getClouds()
-      .subscribe(clouds => {
-        this.photos = clouds;
-        this.assignImage();
-      })
+
   }
 
   createImage(quote) {
@@ -97,7 +98,7 @@ export class PhotoComponent implements OnInit {
   }
 
   assignImage() {
-    let index = Math.floor((Math.random() * this.photos.length));
+    let index = Math.floor((Math.random() * this.photos.length));    
     this.image = this.photos[index].image[0];
     this.createImage(this.quote);
   }
