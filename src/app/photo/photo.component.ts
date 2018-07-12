@@ -74,7 +74,7 @@ export class PhotoComponent implements OnInit {
     context.textBaseline = 'middle';
     context.strokeStyle = "black";
     context.fillStyle = "white";
-    context.lineWidth = 6;
+    context.lineWidth = 3;
     let quoteText = this.getLines(context, quote, 250);
     let height = 150 - ((quoteText.length) * 7.5) - 25;
 
