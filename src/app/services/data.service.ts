@@ -12,7 +12,6 @@ import { AppError } from '../common/app-error';
 })
 export class DataService {
   private url = 'https://cloudspiration-e784.restdb.io/';
-  head = new HttpHeaders({'x-apikey': '5b2ff53e0c346a20d90a5e10'})
 
   constructor(private http:HttpClient) { 
     
