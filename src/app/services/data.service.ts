@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -12,6 +13,7 @@ import { AppError } from '../common/app-error';
 })
 export class DataService {
   private url = 'https://cloudspiration-e784.restdb.io/';
+  head = new HttpHeaders({'x-apikey': environment.databaseApi});
 
   constructor(private http:HttpClient) { 
     

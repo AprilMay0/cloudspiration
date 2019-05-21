@@ -19,3 +19,9 @@ canvas {
   margin-right: auto;
   margin-top: 20px;
 }
+
+.spin {
+  margin-left: calc(50vw - 50px);
+  margin-right: auto;
+  display: block;
+}

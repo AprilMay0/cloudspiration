@@ -15,6 +15,7 @@ export class PhotoComponent implements OnInit {
   image: any[];
   quote: any[];
   isMobile: boolean;
+  isLoading: boolean = true;
 
   constructor(private service: DataService) { }
 
@@ -45,7 +46,7 @@ export class PhotoComponent implements OnInit {
 
   createRegularImage(quote) {
     let context: CanvasRenderingContext2D = this.canvasRef.nativeElement.getContext('2d');
-    context.font = "30pt Trebuchet MS";
+    context.font = "30pt Ubuntu";
     context.textAlign = "center";
     context.textBaseline = 'middle';
     context.strokeStyle = "black";
@@ -65,11 +66,12 @@ export class PhotoComponent implements OnInit {
         context.fillText(quoteText[a], 300, height);
       }
     }
+    this.isLoading = false;
   }
 
   createMobileImage(quote) {
     let context: CanvasRenderingContext2D = this.canvasRef.nativeElement.getContext('2d');
-    context.font = "15pt Trebuchet MS";
+    context.font = "15pt Ubuntu";
     context.textAlign = "center";
     context.textBaseline = 'middle';
     context.strokeStyle = "black";
@@ -89,6 +91,7 @@ export class PhotoComponent implements OnInit {
         context.fillText(quoteText[a], 150, height);
       }
     }
+    this.isLoading = false;
   }
 
   assignQuote(isInit) {

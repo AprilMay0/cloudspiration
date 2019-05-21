@@ -1,7 +1,13 @@
 <div *ngIf="!isMobile">
+  <div *ngIf="isLoading" class="spin">
+    <mat-progress-spinner color="primary" mode="indeterminate"></mat-progress-spinner>
+  </div>
   <canvas #myCanvas id="myCanvas" width="600" height="600"></canvas>
 </div>
 <div *ngIf="isMobile">
+  <div *ngIf="isLoading" class="spin">
+    <mat-progress-spinner color="primary" mode="indeterminate"></mat-progress-spinner>
+  </div>
   <canvas #myCanvas id="myCanvas" width="300" height="300"></canvas>
 </div>
 
